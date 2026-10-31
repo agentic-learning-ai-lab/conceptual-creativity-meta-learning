@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccml"
+version = "0.1.0"
+description = "Conceptual Creativity through Meta-Learning"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "diffusers>=0.21",
+    "transformers>=4.30",
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+    "tqdm>=4.65",
+    "Pillow>=9.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "ruff>=0.0.270",
+]
+
+[tool.setuptools.packages.find]
+include = ["ccml*", "experiments*"]

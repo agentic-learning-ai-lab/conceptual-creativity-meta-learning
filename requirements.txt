@@ -1,0 +1,14 @@
+# Install torch and torchvision for your CUDA version first.
+diffusers>=0.32
+transformers>=4.56
+accelerate>=1.2
+higher>=0.2.1
+numpy
+matplotlib
+Pillow
+pyyaml
+tqdm
+# Optional: 8-bit Qwen2.5-VL loading in score_samples.py
+# bitsandbytes
+# Optional: DreamSim features for the ProCreate baseline
+# dreamsim

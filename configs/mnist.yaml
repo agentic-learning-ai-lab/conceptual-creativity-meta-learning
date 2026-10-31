@@ -1,0 +1,35 @@
+# MNIST experiment configuration
+# CLI arguments override these values
+
+# Paths
+output_dir: outputs/mnist
+checkpoint_dir: checkpoints/mnist
+
+# Model
+img_size: 32
+feature_dim: 512
+
+# Pretraining
+encoder_pretrain_epochs: 5
+decoder_pretrain_epochs: 5
+pretrain_lr: 1e-3
+pretrain_batch_size: 128
+
+# Bi-level optimization (inner loop)
+inner_loop_steps: 10
+inner_loop_lr: 1e-4
+finetune_layers: all
+
+# Guidance (outer loop)
+num_images: 10
+guidance_steps: 200
+guidance_scale: 500.0
+
+# Reward shaping (from MNIST_REWARD_CONFIG)
+ideal_initial_loss: 0.15
+initial_loss_sigma: 0.2
+final_loss_temp: 0.1
+
+# Flags
+skip_pretraining: false
+run_poc: false
